@@ -40,7 +40,6 @@ useEffect(()=>{
       {userData?<div className="headerMessages">
           <img className='userImg' src={img} alt="user img" width={120} />
           <h4>{userData.name}</h4>
-          <p className='linksara7a' >{`${FrontFost()}/sendmessage/${userData._id}`}</p>
           <p className='user_link'>
             <input
               type="text"

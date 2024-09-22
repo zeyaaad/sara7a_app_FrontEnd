@@ -213,7 +213,9 @@ input:focus{
   padding: 10px;
   border-radius: 10px;
 }
-
+.messagespage{
+  width: 100%;
+}
 .messagespage .headerMessages{
   text-align: center;
   background-color: #1f1f21;
@@ -380,7 +382,7 @@ input:focus{
   box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer  .container {
+.footer  .containerr {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -705,4 +707,19 @@ input:checked + .slider:before {
   margin-top: 10px;
   justify-content: center;
 }
+}
+
+.verficon{
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 16px -10px white;
+  margin-top: 50px;
+  width: 50%;
+  text-align: center;
+}
+@media(max-width:600px){
+  .verficon{
+    width: 100%;
+  }
 }

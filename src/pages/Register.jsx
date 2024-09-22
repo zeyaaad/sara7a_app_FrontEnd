@@ -66,7 +66,7 @@ export default function Register() {
             'Content-Type': 'application/json',
           }
         });
-
+        console.log(response)
         if (response.data.message === "success") {
           setErr(null);
           setUserdata({
@@ -91,6 +91,7 @@ export default function Register() {
         }
       }
     } catch (error) {
+      console.log(error)
       const validationErrors = {};
       error?.inner?.forEach(err => {
         validationErrors[err.path] = err.message;

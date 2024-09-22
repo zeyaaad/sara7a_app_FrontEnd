@@ -22,6 +22,7 @@ import PrivacySetting from './pages/PrivacySetting';
 import SearchPage from './pages/SearchPage';
 import ContactPage from './pages/ContactPage';
 import Order from './pages/Order';
+import Verfiy from './pages/Verfiy';
 function App() {
   const {checkauth,isLogIn,ProtectAuth,ProtectRoute } = useContext(MyContext);
 
@@ -36,13 +37,13 @@ function App() {
     {isLogIn!=null?<>
        <Navbar/>
 
-      <div className='allapp w-100'>
-        <Routes>
+       <Routes>
       {/* Auth Routes*/}
         <Route path="/register" element={ <ProtectAuth> <Register/>  </ProtectAuth> } />
         <Route path="/login" element={<ProtectAuth><Login/> </ProtectAuth>} />   
         <Route path="/forgetPassword" element={<ProtectAuth><ForgetEmail/> </ProtectAuth>} />   
         <Route path="/reset-password/:token" element={<ProtectAuth><ResetPassword/> </ProtectAuth>} />   
+        <Route path="/verify/:token" element={<ProtectAuth><Verfiy/> </ProtectAuth>} />   
 
 
       {/* Protected Routes  */}
@@ -64,8 +65,6 @@ function App() {
         
         <Route path="/*" element={  <ProtectRoute> <NotFound/>  </ProtectRoute> }  />
     </Routes>
-      </div>
-    <Footer/>
     
     </>:<>
     <LoadingPage/>
