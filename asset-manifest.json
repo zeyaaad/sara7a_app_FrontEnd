@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/sara7a_app_FrontEnd/static/css/main.bdbc0134.css",
-    "main.js": "/sara7a_app_FrontEnd/static/js/main.f056a17b.js",
+    "main.js": "/sara7a_app_FrontEnd/static/js/main.4fe2296b.js",
     "static/js/453.11cd57b4.chunk.js": "/sara7a_app_FrontEnd/static/js/453.11cd57b4.chunk.js",
     "static/media/bg.avif": "/sara7a_app_FrontEnd/static/media/bg.e91c1cb58ebfa829936a.avif",
     "static/media/logo.svg": "/sara7a_app_FrontEnd/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/sara7a_app_FrontEnd/index.html",
     "main.bdbc0134.css.map": "/sara7a_app_FrontEnd/static/css/main.bdbc0134.css.map",
-    "main.f056a17b.js.map": "/sara7a_app_FrontEnd/static/js/main.f056a17b.js.map",
+    "main.4fe2296b.js.map": "/sara7a_app_FrontEnd/static/js/main.4fe2296b.js.map",
     "453.11cd57b4.chunk.js.map": "/sara7a_app_FrontEnd/static/js/453.11cd57b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bdbc0134.css",
-    "static/js/main.f056a17b.js"
+    "static/js/main.4fe2296b.js"
   ]
 }
