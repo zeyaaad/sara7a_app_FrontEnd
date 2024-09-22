@@ -13,7 +13,7 @@ const MyProvider = ({ children }) => {
  const FrontFost = () => {
   const url = window.location.href; // Get the full URL
   const { protocol, host } = new URL(url); // Extract protocol and host
-  return `${protocol}//${host}`;
+  return `${protocol}//${host}/sara7a_app_FrontEnd/#`;
 };
 
 

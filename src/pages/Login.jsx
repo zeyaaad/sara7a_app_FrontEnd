@@ -56,7 +56,6 @@ let go=useNavigate();
                   setError(" يجب عليك تأكييد تسجيل الدخول من الرساله اللتي ارسلتها لك في البريد الالكتروتي  ");
                 }
                 setLaoding(false)
-                setLaoding(false)
               } catch(err) {
                 if(err.response.data.err==="Email Not Found"){
                   setError("لا يوجد حساب بهذا البريد");
@@ -77,7 +76,7 @@ let go=useNavigate();
                 
               });
               seterrs(errors)
-              setLaoding(true)
+              setLaoding(false)
             
         }
 
