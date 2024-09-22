@@ -10,11 +10,12 @@ const MyProvider = ({ children }) => {
   const token=localStorage.getItem("sara7a_token")
     const Host="https://sara7a-app-back-end.vercel.app";
 
-  const FrontFost = () => {
-    const url = window.location.href; // Get the full URL
-    const host = new URL(url).host; // Extract the host part
-    return host;
-  };
+ const FrontFost = () => {
+  const url = window.location.href; // Get the full URL
+  const { protocol, host } = new URL(url); // Extract protocol and host
+  return `${protocol}//${host}`;
+};
+
 
     async function checkauth(){
         if(!token){
