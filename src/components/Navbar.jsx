@@ -1,14 +1,16 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../context/context';
 import { Link } from 'react-router-dom';
+import logo from "./logo.png"
 export default function Navbar() {
 
   const {checkauth,isLogIn,logOut } = useContext(MyContext);
 
   return (
-            <nav className="navbar navbar-expand-lg navbar-dark  bg-dark">
+            <nav className="navbar w-100 navbar-expand-lg navbar-dark  bg-dark">
             <div className="container">
-                <Link   className="navbar-brand ms-auto" to="/messages" > صارحني  </Link>
+                <img src={logo} width={70} alt="" />
+                <Link   className="navbar-brand ms-auto logoname" to="/messages" > صارحني  </Link>
 
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">

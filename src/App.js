@@ -33,7 +33,8 @@ function App() {
 
   return (
     
-    <>
+    <div  className='w-100 allappp'>
+
     {isLogIn!=null?<>
        <Navbar/>
 
@@ -76,7 +77,8 @@ function App() {
 
 
 
-    </>
+    </div>
+
   );
 }
 

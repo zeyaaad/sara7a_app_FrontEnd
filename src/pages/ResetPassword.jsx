@@ -7,6 +7,7 @@ import LoadingPage from './../components/LoadingPage';
 import { AiOutlineArrowLeft } from 'react-icons/ai'; // For back arrow icon
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';  // Import styles
+import ButtonLoading from './../components/ButtonLoading';
 export default function ResetPassword() {
     const{token}=useParams();
   const { Host } = useContext(MyContext);
@@ -60,11 +61,12 @@ export default function ResetPassword() {
 
   const getData = (e) => {
     const newData = { ...userdata };
-    newData[e.target.name] = e.target.value; // Allow spaces in input fields
+    newData[e.target.name] = e.target.value; 
     setUserdata(newData);
   };
 
   const handleSubmit = async (e) => {
+    setLoading(true)
     e.preventDefault();
     try {
       const cleanedData = {
@@ -84,15 +86,19 @@ export default function ResetPassword() {
             "token":token
           }
         });
+        console.log(response)
         toast.success("تم تغيير كلمة السر بنجاح")
         
         setUserdata({
     password: "",
     repass: "",
   })
+  setLoading(false)
       } catch (err) {
         setErr(err.response.data.message)
+        setLoading(false)
       }
+      setLoading(false)
     } catch (error) {
       const validationErrors = {};
       error?.inner?.forEach(err => {
@@ -100,6 +106,7 @@ export default function ResetPassword() {
       });
       setErr("");
       setErrs(validationErrors);
+      setLoading(false)
     }
   };
 
@@ -124,9 +131,7 @@ export default function ResetPassword() {
           <input type="password" value={userdata.repass} onChange={getData} name='repass' className='form-control' />
           {errs.repass && <div className="text-danger p-1">{errs.repass}</div>}
 
-            <button type="submit"  className='btn btn-primary mt-4' > {loading? <div class="spinner-border text-white" role="status">
-  <span class="sr-only"></span>
-</div>:"تغيير"}   </button>
+            <button type="submit"  className='btn btn-primary mt-4' > {loading?<ButtonLoading/>:"تغيير"}   </button>
 
             <Link className='backloginbtn' to="/login" >   <AiOutlineArrowLeft style={{ marginRight: '8px' }} /> العودة الي صفحه تسجيل الدخول </Link>
         </form>

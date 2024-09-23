@@ -4,8 +4,9 @@ import { MyContext } from '../context/context'
 import LoadingPage from './../components/LoadingPage';
 import img from "./../components/userImg.jpeg"
 import { FaEye, FaTrash, FaEnvelope, FaStar, FaPaperPlane } from 'react-icons/fa';  // Font Awesome icons
+import { Spinner } from 'react-bootstrap';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';  // Import styles
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -335,7 +336,11 @@ export default function Messages() {
             <h1> لم تصلك اي رسائل بعد.. </h1>
             <p> شارك اللينك مع اصدقائك ليصلك رسائلهم </p>
           </div></>}
-                </> : <> <LoadingPage/> </>}
+                </> : <>  <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden"></span>
+      </Spinner>
+    </div> </>}
               
               </>:""}
               {activeTab=="favorites"? <>
@@ -380,7 +385,11 @@ export default function Messages() {
             <h1>   لا توجد اي رسائل في المفضلة </h1>
             <p> شارك اللينك مع اصدقائك ليصلك رسائلهم </p>
           </div></>}
-                </> : <> <LoadingPage/> </>}
+                </> : <>  <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden"></span>
+      </Spinner>
+    </div> </>}
               
               </>:""}
               {activeTab=="sent"? <>
@@ -413,7 +422,11 @@ export default function Messages() {
             <h1>   لا توجد اي رسائل في ارسلتها الي احد.. </h1>
             <p>  ادخل الي روابط اصدقائك وصارحهم </p>
           </div></>}
-                </> : <> <LoadingPage/> </>}
+                </> : <>  <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden"></span>
+      </Spinner>
+    </div> </>}
               
               </>:""}
             

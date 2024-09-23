@@ -217,8 +217,15 @@ input:focus{
   width: 100%;
 }
 .messagespage .headerMessages{
+  width: 100%;
   text-align: center;
   background-color: #1f1f21;
+}
+@media(max-width:400px){
+  .allappp{
+    width: 100%;
+    /* margin-right: 20px ; */
+  }
 }
 .messagespage .headerMessages img {
   border-radius: 50%;
@@ -253,7 +260,7 @@ input:focus{
   display: flex;
 }
 .contmessage .buttons button {
-  margin-left: 3px;
+  margin-left: 5px;
 }
 @media (max-width:993px) {
   .messagecontinf {
@@ -272,42 +279,56 @@ input:focus{
 }
 
 
- .tabs {
-            display: flex;
-            width: 100%;
-          }
-          .tab {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            cursor: pointer;
-            border: none;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-          }
-          .tab.active {
-            background-color: #007bff;
-            color: #fff;
-          }
-          .tab span {
-            margin-left: 8px;
-          }
-          .messages-list {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-          }
-          .messages-list li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-          }
+.tabs {
+  display: flex;
+  /* width: 100%; */
+}
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
+.tab span {
+  margin-left: 8px;
+}
+.messages-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.messages-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
 
 
 
-
+@media(max-width:500px){
+  .tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 13px;
+}
+}
 
 
 
@@ -722,4 +743,26 @@ input:checked + .slider:before {
   .verficon{
     width: 100%;
   }
+}
+
+
+.logoname{
+  margin-right: 0px !important;
+}
+
+select {
+  background-color: transparent!important;
+  color: white !important;
+  border: 1px solid white !important  ;
+  outline: 1px solid white !important  ;
+  display: block;
+  width: 100%;
+  padding: 10px; 
+  border-radius: 10px;
+
+}
+select option {
+  color: white !important;
+  border: 1px solid white !important  ;
+  outline: 1px solid white !important  ;
 }

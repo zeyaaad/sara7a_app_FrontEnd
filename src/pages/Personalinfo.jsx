@@ -291,7 +291,7 @@ async function getNumber(id){
               </div>
               <div className="modal-body">
               <ul className='allvistors'>
-              {allVistors.map((user)=>
+                {allVistors.length>0?<> {allVistors.map((user)=>
               <>
               <li>
                 <div>
@@ -305,7 +305,8 @@ async function getNumber(id){
               <span className='time' > {timeAgo(user.createdAt)} </span>
               <hr />
               </>
-              )}
+              )}</>:<h3> لا يوجد زوار دخلو علي حسابك </h3>}
+             
 
               </ul>
               </div>

@@ -128,7 +128,8 @@ export default function Register() {
           {errs.repass && <div className="text-danger p-1">{errs.repass}</div>}
 
           <label htmlFor="gender" className='mt-2'>النوع:</label>
-          <select onChange={getData} value={userdata.gender} name='gender' className='form-control'>
+          
+          <select onChange={getData} value={userdata.gender} name='gender' className='selectt'>
             <option value="">اختر النوع</option>
             <option value="male">ذكر</option>
             <option value="female">أنثى</option>
